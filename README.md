@@ -1,9 +1,3 @@
-
-╔══════════════════════════════════╗
-║         FOUR FIELD KONO          ║
-╚══════════════════════════════════╝
-
-
 # Four Field Kono — Java + JavaFX
 
 Projeto desenvolvido em Java com JavaFX para a UC de Laboratório de Programação.  
@@ -103,6 +97,7 @@ FourFieldKono/
 
 Como pedido foi criado o documento javaDoc, para isso acontecer é nessesario escrever comentários especiais no código com /** ... */ assim o Javadoc consegue gerar automaticamente uma documentação HTML.
 No fim basta executar:
+
 ```bash
 mvn javadoc:javadoc 
 ```
