@@ -10,7 +10,13 @@ public class Peca {
     private int coluna;
     private int jogadorId; // 1 ou 2
 
-    /** Cria uma peça ativa na posição indicada, pertencente ao jogador dado. */
+    /**
+     * Cria uma peça ativa na posição indicada, pertencente ao jogador dado.
+     *
+     * @param linha linha do tabuleiro onde a peça é colocada
+     * @param coluna coluna do tabuleiro onde a peça é colocada
+     * @param jogadorId identificador do jogador a quem a peça pertence (1 ou 2)
+     */
     public Peca(int linha, int coluna, int jogadorId) {
         this.linha = linha;
         this.coluna = coluna;

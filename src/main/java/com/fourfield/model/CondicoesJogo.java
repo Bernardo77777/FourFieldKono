@@ -141,7 +141,11 @@ public class CondicoesJogo {
         alterarTurno();
     }
 
-    /** Verifica se há uma condição de vitória após a última jogada. */
+    /**
+     * Verifica se há uma condição de vitória após a última jogada.
+     *
+     * @return true se o jogo terminou
+     */
     public boolean verificarCondicaoVitoria() {
         // O turno já foi alternado: turnoAtual é quem vai jogar a seguir,
         // ou seja, é o adversário de quem acabou de jogar.
