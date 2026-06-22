@@ -12,7 +12,8 @@ Grupo: Bernardo Fernandes (25038) | Bento Silva (28844)
 | JDK | 17+ | https://adoptium.net |
 | Maven | 3.8+ | https://maven.apache.org |
 | VS Code | qualquer | https://code.visualstudio.com |
-| Extension Pack Java | — | Marketplace do VS Code |
+| Extension Pack Java | — | https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack |
+
 Para fazer-mos o run da app em VS Code tivemos que instalar uma extensão do Marketplace, extensão essa referida em cima.
 
 ---
@@ -23,8 +24,8 @@ Para fazer-mos o run da app em VS Code tivemos que instalar uma extensão do Mar
 2. **File → Open Folder** → seleciona a pasta `FourFieldKono`
 3. O VS Code deteta automaticamente o projeto Maven (O Maven é uma ferramenta de gestão de projetos Java que gere dependencias, compila e corre o projeto) e instala o JavaFX
 4. Aguardar a build inicial
+
 **NOTA**: se o projeto for aberto no VS Code pode ter alguns erros de compilação, não afeta a execução do programa.
----
 
 ## Para Correr o projeto
 
@@ -43,7 +44,7 @@ mvn javafx:run
 ## Para abrir o projeto de maneira mais simples recomendamos o uso do IDE NetBeans
 
 1. Abre o NetBeans
-2. File → Open Project → seleciona a pasta FourFieldKono
+2. File → Open Project → seleciona a pasta `FourFieldKono`
 3. O NetBeans deteta automaticamente o projeto Maven e configura tudo
 4. Clica no botão Run (triângulo verde) para iniciar a aplicação
 
@@ -82,15 +83,15 @@ FourFieldKono/
 ## Funcionalidades implementadas e establecidas no relatorio
 
 | Requisito | Estado |
-
-| RF01 – Menu Inicial
-| RF02 – Tabuleiro 4×4 
-| RF03 – Movimentos ortogonal 
-| RF04 – Validação do Movimentos 
-| RF05 – Controlo de turnos 
-| RF06 – Multiplayer (rede TCP) 
-| RF07 – Condições de vitória 
-| Terminar jogo antecipadamente 
+|---|---|
+| RF01 – Menu Inicial | ✅ |
+| RF02 – Tabuleiro 4×4 | ✅ |
+| RF03 – Movimentos ortogonal | ✅ |
+| RF04 – Validação do Movimentos | ✅ |
+| RF05 – Controlo de turnos | ✅ |
+| RF06 – Multiplayer (rede TCP) | ✅ |
+| RF07 – Condições de vitória | ✅ |
+| Terminar jogo antecipadamente | ✅ |
 
 ---
 
