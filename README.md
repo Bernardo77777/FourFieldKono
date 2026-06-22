@@ -14,7 +14,7 @@ Grupo: Bernardo Fernandes (25038) | Bento Silva (28844)
 | VS Code | qualquer | https://code.visualstudio.com |
 | Extension Pack Java | — | Marketplace do VS Code |
 
-Para fazer-mos o run da app tivemos que instalar um extensão do Marketplace, extensão essa referida em cima.
+Para fazer-mos o run da app em VS Code tivemos que instalar um extensão do Marketplace, extensão essa referida em cima.
 ---
 
 ## Por escolha propria usamos o IDE VS Code
@@ -24,7 +24,7 @@ Para fazer-mos o run da app tivemos que instalar um extensão do Marketplace, ex
 3. O VS Code deteta automaticamente o projeto Maven (O Maven é uma ferramenta de gestão de projetos Java que gere dependencias, compila e corre o projeto) e instala o JavaFX
 4. Aguardar a build inicial
 
-**NOTA**: se o projeto for aberto no vs pode ter alguns erros de compilação, não afeta a execução do programa.
+**NOTA**: se o projeto for aberto no VS Code pode ter alguns erros de compilação, não afeta a execução do programa.
 ---
 
 ## Para Correr o projeto
@@ -40,6 +40,18 @@ mvn javafx:run
 ```
 
 ---
+
+## Para abrir o projeto de maneira mais simples recomendamos o uso do IDE NetBeans
+
+1. Abre o NetBeans
+2. File → Open Project → seleciona a pasta FourFieldKono
+3. O NetBeans deteta automaticamente o projeto Maven e configura tudo
+4. Clica no botão Run (triângulo verde) para iniciar a aplicação
+
+**NOTA**: O JavaFX é gerido automaticamente pelo Maven, pelo que não é necessário instalá-lo separadamente.
+
+---
+
 
 ## Estrutura do Projeto
 
