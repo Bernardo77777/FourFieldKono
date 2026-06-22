@@ -8,13 +8,13 @@ Grupo: Bernardo Fernandes (25038) | Bento Silva (28844)
 ## Pré-requisitos
 
 | Ferramenta | Versão mínima | Download |
-
+|---|---|---|
 | JDK | 17+ | https://adoptium.net |
 | Maven | 3.8+ | https://maven.apache.org |
 | VS Code | qualquer | https://code.visualstudio.com |
 | Extension Pack Java | — | Marketplace do VS Code |
+Para fazer-mos o run da app em VS Code tivemos que instalar uma extensão do Marketplace, extensão essa referida em cima.
 
-Para fazer-mos o run da app em VS Code tivemos que instalar um extensão do Marketplace, extensão essa referida em cima.
 ---
 
 ## Por escolha propria usamos o IDE VS Code
@@ -23,7 +23,6 @@ Para fazer-mos o run da app em VS Code tivemos que instalar um extensão do Mark
 2. **File → Open Folder** → seleciona a pasta `FourFieldKono`
 3. O VS Code deteta automaticamente o projeto Maven (O Maven é uma ferramenta de gestão de projetos Java que gere dependencias, compila e corre o projeto) e instala o JavaFX
 4. Aguardar a build inicial
-
 **NOTA**: se o projeto for aberto no VS Code pode ter alguns erros de compilação, não afeta a execução do programa.
 ---
 
