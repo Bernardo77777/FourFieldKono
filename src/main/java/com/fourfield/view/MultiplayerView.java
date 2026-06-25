@@ -123,18 +123,22 @@ public class MultiplayerView {
             try { porta = Integer.parseInt(campoPorta.getText().trim()); } catch (NumberFormatException ex) {}
 
             if (rbServidor.isSelected()) {
-                // Iniciar servidor
+                // Iniciar servidor e esperar que o outro jogador se junte antes de abrir o tabuleiro
                 try {
                     lblStatus.setText("⏳ À espera de ligação em " + ServidorJogo.obterIpLocal() + ":" + porta + "...");
-                    ServidorJogo servidor = new ServidorJogo(msg ->
-                        Platform.runLater(() -> lblStatus.setText("✅ Cliente ligado!")));
+                    btnLigar.setDisable(true);
+                    ServidorJogo servidor = new ServidorJogo(msg -> {});
+                    servidor.setOnLigado(() -> Platform.runLater(() -> {
+                        lblStatus.setText("✅ O outro jogador juntou-se! A iniciar o jogo...");
+                        // Só agora, com o outro jogador já ligado, abre o tabuleiro (anfitrião joga como J1)
+                        JogoView jogo = new JogoView(stage, nome, "Adversário (remoto)");
+                        jogo.setServidor(servidor);
+                        jogo.setIdLocal(1);
+                        jogo.show();
+                    }));
                     servidor.iniciar(porta);
-                    // Abre o jogo em modo servidor (anfitrião joga como J1)
-                    JogoView jogo = new JogoView(stage, nome, "Adversário (remoto)");
-                    jogo.setServidor(servidor);
-                    jogo.setIdLocal(1);
-                    jogo.show();
                 } catch (Exception ex) {
+                    btnLigar.setDisable(false);
                     lblStatus.setText("❌ Erro: " + ex.getMessage());
                 }
             } else {

@@ -16,6 +16,7 @@ public class ServidorJogo {
     private PrintWriter out;
     private BufferedReader in;
     private volatile Consumer<String> onMensagemRecebida;
+    private volatile Runnable onLigado;
 
     /** Cria o servidor com o callback a chamar quando chegar uma mensagem do cliente. */
     public ServidorJogo(Consumer<String> onMensagemRecebida) {
@@ -27,6 +28,11 @@ public class ServidorJogo {
         this.onMensagemRecebida = onMensagemRecebida;
     }
 
+    /** Define o callback a chamar logo que o cliente se ligar, independentemente de jogadas. */
+    public void setOnLigado(Runnable onLigado) {
+        this.onLigado = onLigado;
+    }
+
     /** Inicia o servidor na porta indicada. */
     public void iniciar(int porta) throws IOException {
         serverSocket = new ServerSocket(porta);
@@ -36,6 +42,7 @@ public class ServidorJogo {
                 clientSocket = serverSocket.accept();
                 out = new PrintWriter(clientSocket.getOutputStream(), true);
                 in = new BufferedReader(new InputStreamReader(clientSocket.getInputStream()));
+                if (onLigado != null) onLigado.run();
                 // Ouve mensagens do cliente
                 String msg;
                 while ((msg = in.readLine()) != null) {
